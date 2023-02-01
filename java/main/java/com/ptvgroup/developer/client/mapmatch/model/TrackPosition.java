@@ -41,7 +41,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   TrackPosition.JSON_PROPERTY_HEADING,
   TrackPosition.JSON_PROPERTY_DISTANCE_FROM_PREVIOUS_POSITION
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-09T14:39:28.947834Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-01T08:33:58.138310Z[Etc/UTC]")
 public class TrackPosition {
   public static final String JSON_PROPERTY_LATITUDE = "latitude";
   private Double latitude;

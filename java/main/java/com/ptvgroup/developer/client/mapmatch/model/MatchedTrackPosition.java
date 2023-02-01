@@ -47,7 +47,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   MatchedTrackPosition.JSON_PROPERTY_ANGLE_DIFFERENCE,
   MatchedTrackPosition.JSON_PROPERTY_SEGMENT_ATTRIBUTES
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-09T14:39:28.947834Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-01T08:33:58.138310Z[Etc/UTC]")
 public class MatchedTrackPosition {
   public static final String JSON_PROPERTY_MATCH_TYPE = "matchType";
   private MatchType matchType;

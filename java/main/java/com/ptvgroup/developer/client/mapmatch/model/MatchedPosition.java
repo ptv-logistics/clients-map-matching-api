@@ -50,7 +50,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   MatchedPosition.JSON_PROPERTY_SEGMENT_ATTRIBUTES,
   MatchedPosition.JSON_PROPERTY_WARNINGS
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-09T14:39:28.947834Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-01T08:33:58.138310Z[Etc/UTC]")
 public class MatchedPosition {
   public static final String JSON_PROPERTY_LATITUDE = "latitude";
   private JsonNullable<Double> latitude = JsonNullable.<Double>undefined();
