@@ -13,7 +13,7 @@
  */
 
 
-export const BASE_PATH = "https://api.staging.myptv.com/mapmatch/v1".replace(/\/+$/, "");
+export const BASE_PATH = "https://api.myptv.com/mapmatch/v1".replace(/\/+$/, "");
 
 const isBlob = (value: any) => typeof Blob !== 'undefined' && value instanceof Blob;
 
