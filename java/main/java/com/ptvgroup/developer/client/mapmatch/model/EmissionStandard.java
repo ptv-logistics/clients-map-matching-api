@@ -25,19 +25,41 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * The current status of the matching calculation.   * &#x60;RUNNING&#x60; - The matching calculation is still running.   * &#x60;SUCCEEDED&#x60; - The matching calculation has completed successfully.   * &#x60;FAILED&#x60; - The matching calculation has completed with a failure.
+ * The emission standard of the vehicle valid in the European Union.
  */
-public enum MatchingStatus {
+public enum EmissionStandard {
   
-  RUNNING("RUNNING"),
+  NONE("NONE"),
   
-  SUCCEEDED("SUCCEEDED"),
+  EURO_0("EURO_0"),
   
-  FAILED("FAILED");
+  EURO_1("EURO_1"),
+  
+  EURO_2("EURO_2"),
+  
+  EURO_3("EURO_3"),
+  
+  EURO_4("EURO_4"),
+  
+  EURO_5("EURO_5"),
+  
+  EURO_EEV("EURO_EEV"),
+  
+  EURO_6("EURO_6"),
+  
+  EURO_6C("EURO_6C"),
+  
+  EURO_6D_TEMP("EURO_6D_TEMP"),
+  
+  EURO_6D("EURO_6D"),
+  
+  EURO_6E("EURO_6E"),
+  
+  EURO_7("EURO_7");
 
   private String value;
 
-  MatchingStatus(String value) {
+  EmissionStandard(String value) {
     this.value = value;
   }
 
@@ -52,8 +74,8 @@ public enum MatchingStatus {
   }
 
   @JsonCreator
-  public static MatchingStatus fromValue(String value) {
-    for (MatchingStatus b : MatchingStatus.values()) {
+  public static EmissionStandard fromValue(String value) {
+    for (EmissionStandard b : EmissionStandard.values()) {
       if (b.value.equals(value)) {
         return b;
       }
