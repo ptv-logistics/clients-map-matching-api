@@ -26,34 +26,26 @@ using OpenAPIDateConverter = PTV.Developer.Clients.mapmatch.Client.OpenAPIDateCo
 namespace PTV.Developer.Clients.mapmatch.Model
 {
     /// <summary>
-    /// Contains positions to be matched as a track on a map.
+    /// Describes the toll properties of a road segment.
     /// </summary>
-    [DataContract(Name = "Track")]
-    public partial class Track : IEquatable<Track>, IValidatableObject
+    [DataContract(Name = "Toll")]
+    public partial class Toll : IEquatable<Toll>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Track" /> class.
+        /// Initializes a new instance of the <see cref="Toll" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected Track() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Track" /> class.
-        /// </summary>
-        /// <param name="positions">positions (required).</param>
-        public Track(List<TrackPosition> positions = default(List<TrackPosition>))
+        /// <param name="vehicleCategories">List of all vehicle types for which a toll is due on a road section.   Available values are:  \&quot;ALL_VEHICLES\&quot;, \&quot;BUS\&quot;, \&quot;CAR\&quot;, \&quot;CARPOOL\&quot;, \&quot;DELIVERY_TRUCK\&quot;, \&quot;MOTORCYCLE\&quot;, \&quot;TAXI\&quot;, \&quot;THROUGH_TRAFFIC\&quot;, \&quot;TRUCK\&quot;, \&quot;PEDESTRIAN\&quot;, \&quot;EMERGENCY_VEHICLE\&quot;.   This list can be extended at any time, clients should handle unknown values properly..</param>
+        public Toll(List<string> vehicleCategories = default(List<string>))
         {
-            // to ensure "positions" is required (not null)
-            if (positions == null) {
-                throw new ArgumentNullException("positions is a required property for Track and cannot be null");
-            }
-            this.Positions = positions;
+            this.VehicleCategories = vehicleCategories;
         }
 
         /// <summary>
-        /// Gets or Sets Positions
+        /// List of all vehicle types for which a toll is due on a road section.   Available values are:  \&quot;ALL_VEHICLES\&quot;, \&quot;BUS\&quot;, \&quot;CAR\&quot;, \&quot;CARPOOL\&quot;, \&quot;DELIVERY_TRUCK\&quot;, \&quot;MOTORCYCLE\&quot;, \&quot;TAXI\&quot;, \&quot;THROUGH_TRAFFIC\&quot;, \&quot;TRUCK\&quot;, \&quot;PEDESTRIAN\&quot;, \&quot;EMERGENCY_VEHICLE\&quot;.   This list can be extended at any time, clients should handle unknown values properly.
         /// </summary>
-        [DataMember(Name = "positions", IsRequired = true, EmitDefaultValue = false)]
-        public List<TrackPosition> Positions { get; set; }
+        /// <value>List of all vehicle types for which a toll is due on a road section.   Available values are:  \&quot;ALL_VEHICLES\&quot;, \&quot;BUS\&quot;, \&quot;CAR\&quot;, \&quot;CARPOOL\&quot;, \&quot;DELIVERY_TRUCK\&quot;, \&quot;MOTORCYCLE\&quot;, \&quot;TAXI\&quot;, \&quot;THROUGH_TRAFFIC\&quot;, \&quot;TRUCK\&quot;, \&quot;PEDESTRIAN\&quot;, \&quot;EMERGENCY_VEHICLE\&quot;.   This list can be extended at any time, clients should handle unknown values properly.</value>
+        [DataMember(Name = "vehicleCategories", EmitDefaultValue = false)]
+        public List<string> VehicleCategories { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,8 +54,8 @@ namespace PTV.Developer.Clients.mapmatch.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class Track {\n");
-            sb.Append("  Positions: ").Append(Positions).Append("\n");
+            sb.Append("class Toll {\n");
+            sb.Append("  VehicleCategories: ").Append(VehicleCategories).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -84,15 +76,15 @@ namespace PTV.Developer.Clients.mapmatch.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as Track);
+            return this.Equals(input as Toll);
         }
 
         /// <summary>
-        /// Returns true if Track instances are equal
+        /// Returns true if Toll instances are equal
         /// </summary>
-        /// <param name="input">Instance of Track to be compared</param>
+        /// <param name="input">Instance of Toll to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Track input)
+        public bool Equals(Toll input)
         {
             if (input == null)
             {
@@ -100,10 +92,10 @@ namespace PTV.Developer.Clients.mapmatch.Model
             }
             return 
                 (
-                    this.Positions == input.Positions ||
-                    this.Positions != null &&
-                    input.Positions != null &&
-                    this.Positions.SequenceEqual(input.Positions)
+                    this.VehicleCategories == input.VehicleCategories ||
+                    this.VehicleCategories != null &&
+                    input.VehicleCategories != null &&
+                    this.VehicleCategories.SequenceEqual(input.VehicleCategories)
                 );
         }
 
@@ -116,9 +108,9 @@ namespace PTV.Developer.Clients.mapmatch.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Positions != null)
+                if (this.VehicleCategories != null)
                 {
-                    hashCode = (hashCode * 59) + this.Positions.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VehicleCategories.GetHashCode();
                 }
                 return hashCode;
             }
