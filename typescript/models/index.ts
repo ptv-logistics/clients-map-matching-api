@@ -2,7 +2,9 @@
 /* eslint-disable */
 export * from './CalculationMode';
 export * from './CausingError';
+export * from './EmissionStandard';
 export * from './ErrorResponse';
+export * from './LowEmissionZoneDescriptors';
 export * from './MatchType';
 export * from './MatchedPath';
 export * from './MatchedPosition';
@@ -15,6 +17,8 @@ export * from './MatchingStatus';
 export * from './PositionsResultType';
 export * from './SegmentAttributes';
 export * from './SegmentLocationDescriptors';
+export * from './Toll';
 export * from './Track';
 export * from './TrackPosition';
+export * from './Vehicle';
 export * from './Warning';
