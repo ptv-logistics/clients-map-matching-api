@@ -37,7 +37,7 @@ import com.ptvgroup.developer.client.mapmatch.ApiClient;
 @JsonPropertyOrder({
   Toll.JSON_PROPERTY_VEHICLE_CATEGORIES
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-08-25T11:58:08.355728377Z[Etc/UTC]", comments = "Generator version: 7.8.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-28T09:22:31.587134024Z[Etc/UTC]", comments = "Generator version: 7.8.0")
 public class Toll {
   public static final String JSON_PROPERTY_VEHICLE_CATEGORIES = "vehicleCategories";
   private List<String> vehicleCategories;

@@ -43,7 +43,7 @@ import com.ptvgroup.developer.client.mapmatch.ApiClient;
   MatchedTrack.JSON_PROPERTY_GEOMETRY,
   MatchedTrack.JSON_PROPERTY_TRACK_POSITIONS
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-08-25T11:58:08.355728377Z[Etc/UTC]", comments = "Generator version: 7.8.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-28T09:22:31.587134024Z[Etc/UTC]", comments = "Generator version: 7.8.0")
 public class MatchedTrack {
   public static final String JSON_PROPERTY_ID = "id";
   private String id;

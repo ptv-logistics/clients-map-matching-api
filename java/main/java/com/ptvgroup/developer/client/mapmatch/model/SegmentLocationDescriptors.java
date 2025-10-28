@@ -38,7 +38,7 @@ import com.ptvgroup.developer.client.mapmatch.ApiClient;
   SegmentLocationDescriptors.JSON_PROPERTY_POSTAL_CODE,
   SegmentLocationDescriptors.JSON_PROPERTY_STREET
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-08-25T11:58:08.355728377Z[Etc/UTC]", comments = "Generator version: 7.8.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-28T09:22:31.587134024Z[Etc/UTC]", comments = "Generator version: 7.8.0")
 public class SegmentLocationDescriptors {
   public static final String JSON_PROPERTY_COUNTRY_NAME = "countryName";
   private String countryName;
